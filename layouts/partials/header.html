@@ -101,6 +101,14 @@
               </a>
             </div>
           {{ end }}
+
+          {{ if .Site.Params.resume }}
+          <div class="item">
+            <a href="{{ .Site.Params.resume }}" target="_blank">
+              <i class="large file icon" title="resume"></i>
+            </a>
+          </div>
+          {{ end }}
         </nav>
       </div>
     </article>
