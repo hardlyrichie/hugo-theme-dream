@@ -13,6 +13,11 @@
           <div class="sub header">{{ .Date.Format "Monday, Jan 2, 2006" }}</div>
         </h2>
       </header>
+      <div class="ui large image" style="margin-top: 1rem;">
+        {{ if isset .Params "cover" }}
+          <img src="{{ .Params.cover }}" alt="{{ .Title }}" />
+        {{ end }}
+      </div>
       <article style="margin-top: 2rem;">{{ .Content | emojify }}</article>
     </section>
 
