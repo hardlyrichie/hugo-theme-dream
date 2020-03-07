@@ -1,5 +1,5 @@
 <article class="dream-header">
-  <section class="ui top attached center aligned segment">
+  <section class="ui top attached center aligned segment" style="border: none;">
     <div class="ui small circular image">
       {{ if isset .Site.Params "avatar" }}
         <img src="{{ .Site.Params.avatar }}">
@@ -27,7 +27,7 @@
   </section>
 
   {{ if .Site.Taxonomies.tags }}
-  <section class="ui attached center aligned segment dream-tags">
+  <section class="ui attached center aligned segment dream-tags" style="border: none; border-top: 1px solid #d4d4d5;">
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <a class="ui label" href="{{ "tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
     {{ end }}
@@ -58,7 +58,7 @@
   </section>
   {{ end }}
 
-  <section class="ui attached center aligned segment">
+  <section class="ui attached center aligned segment" style="border: none; border-top: 1px solid #d4d4d5;">
     <article>
       <div class="ui attached">
         <nav class="ui secondary menu dream-menu" style="justify-content: center">
@@ -114,7 +114,7 @@
     </article>
   </section>
 
-  <section class="ui bottom attached center aligned segment">
+  <section class="ui bottom attached center aligned segment" style="border: none; border-top: 1px solid #d4d4d5;">
       {{ if .Site.Params.siteStartYear }}
       <p>© {{ if eq now.Year .Site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ .Site.Params.siteStartYear }} - {{ now.Year }}{{ end }} {{ .Site.Title }}</p>
       {{ else }}

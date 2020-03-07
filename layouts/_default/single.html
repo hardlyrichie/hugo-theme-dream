@@ -6,7 +6,7 @@
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
 
-    <section class="ui top attached segment" id="dream-save-post-as-img">
+    <section class="ui top attached segment" id="dream-save-post-as-img" style="border-radius: 0; border: none; background-color: #f8f8f8;">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
           {{ .Title }}
@@ -21,7 +21,7 @@
       <article style="margin-top: 2rem;">{{ .Content | emojify }}</article>
     </section>
 
-    <footer class="ui attached segment dream-tags">
+    <footer class="ui attached segment dream-tags" style="border-radius: 0; border: none; border-top: 1px solid #d4d4d5; background-color: #f8f8f8;">
       {{ if isset .Params "tags" }}
         {{ range $tag := .Params.tags }}
           <a class="ui label" href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}" title="{{ $tag }}">{{ $tag }}</a>

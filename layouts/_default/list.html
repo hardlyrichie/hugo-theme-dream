@@ -18,7 +18,7 @@
 
   {{ $paginator := .Paginate .Pages }}
   {{ range $paginator.Pages }}
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column" style="padding: .3rem .3rem .3rem .3rem;">
       {{ .Render "summary" }}
     </div>
   {{ end }}
